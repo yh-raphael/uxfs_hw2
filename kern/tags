@@ -1,0 +1,88 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/darren@hiebert.com/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.0.1	//
+CFLAGS	Makefile	/^CFLAGS = $(GLOBAL_CFLAGS) $(EXTRA_CFLAGS)$/;"	m
+FLAGS	Makefile	/^FLAGS = -D__KERNEL__ -DEXPORT_SYMTAB -DMODULE $(VERCFLAGS)$/;"	m
+GLOBAL_CFLAGS	Makefile	/^GLOBAL_CFLAGS = -g -I$(KERNELDIR)\/include $(FLAGS)$/;"	m
+KERNELDIR	Makefile	/^KERNELDIR = \/usr\/src\/linux-2.4.18$/;"	m
+M_OBJS	Makefile	/^M_OBJS = ux_dir.o ux_alloc.o ux_file.o ux_inode.o$/;"	m
+M_TARGET	Makefile	/^M_TARGET = uxfs$/;"	m
+SRCS	Makefile	/^SRCS = $(M_OBJS:.o=.c)$/;"	m
+UX_BLOCK_FREE	ux_fs.h	64;"	d
+UX_BLOCK_INUSE	ux_fs.h	65;"	d
+UX_BSIZE	ux_fs.h	18;"	d
+UX_BSIZE_BITS	ux_fs.h	19;"	d
+UX_DIRECT_BLOCKS	ux_fs.h	14;"	d
+UX_DIRS_PER_BLOCK	ux_fs.h	13;"	d
+UX_FIRST_DATA_BLOCK	ux_fs.h	17;"	d
+UX_FSCLEAN	ux_fs.h	71;"	d
+UX_FSDIRTY	ux_fs.h	72;"	d
+UX_INODE_BLOCK	ux_fs.h	21;"	d
+UX_INODE_FREE	ux_fs.h	62;"	d
+UX_INODE_INUSE	ux_fs.h	63;"	d
+UX_MAGIC	ux_fs.h	20;"	d
+UX_MAXBLOCKS	ux_fs.h	16;"	d
+UX_MAXFILES	ux_fs.h	15;"	d
+UX_NAMELEN	ux_fs.h	12;"	d
+UX_ROOT_INO	ux_fs.h	22;"	d
+d_ino	ux_fs.h	/^        __u32       d_ino;$/;"	m	struct:ux_dirent
+d_name	ux_fs.h	/^        char        d_name[UX_NAMELEN];$/;"	m	struct:ux_dirent
+exit_uxfs_fs	ux_inode.c	/^static void __exit exit_uxfs_fs(void)$/;"	f	file:
+i_addr	ux_fs.h	/^        __u32        i_addr[UX_DIRECT_BLOCKS];$/;"	m	struct:ux_inode
+i_atime	ux_fs.h	/^        __u32        i_atime;$/;"	m	struct:ux_inode
+i_blocks	ux_fs.h	/^        __u32        i_blocks;$/;"	m	struct:ux_inode
+i_ctime	ux_fs.h	/^        __u32        i_ctime;$/;"	m	struct:ux_inode
+i_gid	ux_fs.h	/^        __s32        i_gid;$/;"	m	struct:ux_inode
+i_mode	ux_fs.h	/^        __u32        i_mode;$/;"	m	struct:ux_inode
+i_mtime	ux_fs.h	/^        __u32        i_mtime;$/;"	m	struct:ux_inode
+i_nlink	ux_fs.h	/^        __u32        i_nlink;$/;"	m	struct:ux_inode
+i_private	ux_fs.h	25;"	d
+i_size	ux_fs.h	/^        __u32        i_size;$/;"	m	struct:ux_inode
+i_uid	ux_fs.h	/^        __s32        i_uid;$/;"	m	struct:ux_inode
+init_uxfs_fs	ux_inode.c	/^static int __init init_uxfs_fs(void)$/;"	f	file:
+s_block	ux_fs.h	/^        __u32        s_block[UX_MAXBLOCKS];$/;"	m	struct:ux_superblock
+s_inode	ux_fs.h	/^        __u32        s_inode[UX_MAXFILES];$/;"	m	struct:ux_superblock
+s_magic	ux_fs.h	/^        __u32        s_magic;$/;"	m	struct:ux_superblock
+s_mod	ux_fs.h	/^        __u32        s_mod;$/;"	m	struct:ux_superblock
+s_nbfree	ux_fs.h	/^        __u32        s_nbfree;$/;"	m	struct:ux_superblock
+s_nifree	ux_fs.h	/^        __u32        s_nifree;$/;"	m	struct:ux_superblock
+s_private	ux_fs.h	24;"	d
+u_sb	ux_fs.h	/^        struct ux_superblock      *u_sb;$/;"	m	struct:ux_fs
+u_sbh	ux_fs.h	/^        struct buffer_head        *u_sbh;$/;"	m	struct:ux_fs
+ux_aops	ux_file.c	/^struct address_space_operations ux_aops = {$/;"	v
+ux_block_alloc	ux_alloc.c	/^ux_block_alloc(struct super_block *sb)$/;"	f
+ux_bmap	ux_file.c	/^ux_bmap(struct address_space *mapping, long block)$/;"	f
+ux_create	ux_dir.c	/^ux_create(struct inode *dip, struct dentry *dentry, int mode)$/;"	f
+ux_delete_inode	ux_inode.c	/^ux_delete_inode(struct inode *inode)$/;"	f
+ux_dir_inops	ux_dir.c	/^struct inode_operations ux_dir_inops = {$/;"	v
+ux_dir_operations	ux_dir.c	/^struct file_operations ux_dir_operations = {$/;"	v
+ux_diradd	ux_dir.c	/^ux_diradd(struct inode *dip, const char *name, int inum)$/;"	f
+ux_dirdel	ux_dir.c	/^ux_dirdel(struct inode *dip, char *name)$/;"	f
+ux_dirent	ux_fs.h	/^struct ux_dirent {$/;"	s
+ux_file_inops	ux_file.c	/^struct inode_operations ux_file_inops = {$/;"	v
+ux_file_operations	ux_file.c	/^struct file_operations ux_file_operations = {$/;"	v
+ux_find_entry	ux_inode.c	/^ux_find_entry(struct inode *dip, char *name)$/;"	f
+ux_fs	ux_fs.h	/^struct ux_fs {$/;"	s
+ux_get_block	ux_file.c	/^ux_get_block(struct inode *inode, long block, $/;"	f
+ux_ialloc	ux_alloc.c	/^ux_ialloc(struct super_block *sb)$/;"	f
+ux_inode	ux_fs.h	/^struct ux_inode {$/;"	s
+ux_link	ux_dir.c	/^ux_link(struct dentry *old, struct inode *dip, struct dentry *new)$/;"	f
+ux_lookup	ux_dir.c	/^ux_lookup(struct inode *dip, struct dentry *dentry)$/;"	f
+ux_mkdir	ux_dir.c	/^ux_mkdir(struct inode *dip, struct dentry *dentry, int mode)$/;"	f
+ux_prepare_write	ux_file.c	/^ux_prepare_write(struct file *file, struct page *page,$/;"	f
+ux_put_super	ux_inode.c	/^ux_put_super(struct super_block *s)$/;"	f
+ux_read_inode	ux_inode.c	/^ux_read_inode(struct inode *inode)$/;"	f
+ux_read_super	ux_inode.c	/^ux_read_super(struct super_block *s, void *data, int silent)$/;"	f
+ux_readdir	ux_dir.c	/^ux_readdir(struct file *filp, void *dirent, filldir_t filldir)$/;"	f
+ux_readpage	ux_file.c	/^ux_readpage(struct file *file, struct page *page)$/;"	f
+ux_rmdir	ux_dir.c	/^ux_rmdir(struct inode *dip, struct dentry *dentry)$/;"	f
+ux_statfs	ux_inode.c	/^ux_statfs(struct super_block *sb, struct statfs *buf)$/;"	f
+ux_superblock	ux_fs.h	/^struct ux_superblock {$/;"	s
+ux_unlink	ux_dir.c	/^ux_unlink(struct inode *dip, struct dentry *dentry)$/;"	f
+ux_write_inode	ux_inode.c	/^ux_write_inode(struct inode *inode, int unused)$/;"	f
+ux_write_super	ux_inode.c	/^ux_write_super(struct super_block *sb)$/;"	f
+ux_writepage	ux_file.c	/^ux_writepage(struct page *page)$/;"	f
+uxfs_sops	ux_inode.c	/^struct super_operations uxfs_sops = {$/;"	v
